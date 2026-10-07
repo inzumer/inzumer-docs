@@ -1,5 +1,7 @@
-/* Inzumer: black and white, like the INZ logos. The site title reads as the text logo. */
+/* Inzumer: black and white, like the INZ logos, in Inter like inzumer.com. The site title reads as
+   the text logo. */
 :root {
+  --sl-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --sl-color-accent-low: #2a2a2a;
   --sl-color-accent: #e5e5e5;
   --sl-color-accent-high: #ffffff;
@@ -16,7 +18,7 @@
   border-radius: 8px;
   background: #111111;
   color: #ffffff;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.5px;
 }
 
