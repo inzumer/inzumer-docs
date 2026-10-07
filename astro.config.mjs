@@ -21,7 +21,12 @@ export default defineConfig({
       favicon: '/favicon.ico',
       // Long commands wrap instead of scrolling sideways on phones.
       expressiveCode: { defaultProps: { wrap: true } },
-      customCss: ['./src/styles/theme.css'],
+      // The tokens' thin scrollbars, as in every Inzumer UI.
+      customCss: [
+        '@inzumer/tokens/css/variables',
+        '@inzumer/tokens/css/scrollbar',
+        './src/styles/theme.css',
+      ],
       head: [
         { tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
         {
