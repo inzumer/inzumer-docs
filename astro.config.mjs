@@ -1,5 +1,7 @@
 // @ts-check
+import react from '@astrojs/react';
 import starlight from '@astrojs/starlight';
+import tailwindcss from '@tailwindcss/vite';
 import mermaid from 'astro-mermaid';
 import { defineConfig } from 'astro/config';
 import starlightLinksValidator from 'starlight-links-validator';
@@ -10,7 +12,10 @@ const description =
 
 export default defineConfig({
   site,
+  vite: { plugins: [tailwindcss()] },
   integrations: [
+    // Renders the ui-library components in the overrides below (no client JavaScript).
+    react(),
     // Before Starlight, so ```mermaid blocks become diagrams instead of highlighted code.
     mermaid({ theme: 'neutral', autoTheme: true }),
     starlight({
@@ -25,9 +30,21 @@ export default defineConfig({
       customCss: [
         '@inzumer/tokens/css/variables',
         '@inzumer/tokens/css/scrollbar',
+        './src/styles/ui-library.css',
         './src/styles/theme.css',
       ],
+      // Starlight's theme picker and mobile menu button, with ui-library components.
+      components: {
+        ThemeSelect: './src/components/molecules/ThemeSelect/ThemeSelect.astro',
+        MobileMenuToggle: './src/components/molecules/MenuButton/MenuButton.astro',
+      },
       head: [
+        // The tokens read data-color-scheme; Starlight sets data-theme. Keep them in sync.
+        {
+          tag: 'script',
+          content:
+            "(() => { const root = document.documentElement; const sync = () => { root.dataset.colorScheme = root.dataset.theme; }; sync(); new MutationObserver(sync).observe(root, { attributes: true, attributeFilter: ['data-theme'] }); })();",
+        },
         { tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
         {
           tag: 'link',
