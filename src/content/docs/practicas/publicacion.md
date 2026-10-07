@@ -12,5 +12,5 @@ description: 'Dónde se publica cada cosa y cómo se comparte.'
 
 - Todo se publica en **GitHub Pages** desde `main`; el DNS de `inzumer.com` está en Vercel, con
   un CNAME por subdominio hacia `inzumer.github.io`.
-- Cada sitio tiene su **logo de texto** (INZ.UI, INZ.EMAILS, INZ.DOCS…) en Inter, la fuente de inzumer.com,, favicons con el logo INZ y
+- Cada sitio tiene su **logo de texto** (INZ.UI, INZ.EMAILS, INZ.DOCS…) en Inter, favicons con el logo INZ y
   **OpenGraph completo** (título, descripción, URL e imagen de 1200×630) para compartirlo.

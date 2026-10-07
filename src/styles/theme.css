@@ -1,4 +1,4 @@
-/* Inzumer: black and white, like the INZ logos, in Inter like inzumer.com. The site title reads as
+/* Inzumer: black and white, like the INZ logos, in Inter. The site title reads as
    the text logo. */
 :root {
   --sl-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -25,4 +25,48 @@
 :root:not([data-theme='light']) .site-title {
   background: #ffffff;
   color: #111111;
+}
+
+/* Phones: long code wraps inside tables and diagrams fit the column. */
+.sl-markdown-content :is(td, th) code {
+  overflow-wrap: anywhere;
+}
+
+.sl-markdown-content .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 44px touch targets for the hero actions. */
+.sl-link-button {
+  min-height: 2.75rem;
+}
+
+/* Phones: each table row stacks as a block, its first cell as the title. */
+@media (max-width: 50rem) {
+  .sl-markdown-content table,
+  .sl-markdown-content tbody,
+  .sl-markdown-content tr,
+  .sl-markdown-content td {
+    display: block;
+    width: 100%;
+  }
+
+  .sl-markdown-content thead {
+    display: none;
+  }
+
+  .sl-markdown-content tr {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .sl-markdown-content td {
+    padding: 0;
+    border: none;
+  }
+
+  .sl-markdown-content td:first-child {
+    font-weight: 600;
+  }
 }
