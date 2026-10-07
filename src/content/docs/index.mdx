@@ -1,6 +1,6 @@
 ---
 title: 'Ecosistema Inzumer'
-description: 'Los paquetes del ecosistema Inzumer y cómo combinarlos: tokens, componentes web y mobile, emails, configuración y CI.'
+description: 'Los paquetes del ecosistema Inzumer y cómo combinarlos: tokens, componentes, emails, apps móviles, configuración y CI.'
 template: splash
 hero:
   tagline: Los paquetes para construir un proyecto, y cómo encajan.
@@ -20,7 +20,7 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
     `@inzumer/tokens`: colores, tipografía y espaciado, en CSS y como preset de Tailwind.
   </Card>
   <Card title="Componentes" icon="puzzle">
-    `@inzumer/ui-library` (web) y la librería mobile (React Native, en desarrollo).
+    `@inzumer/ui-library`: la web y, dentro de una WebView, las apps móviles.
   </Card>
   <Card title="Emails" icon="email">
     `@inzumer/email`: componentes y plantillas de mails con el mismo diseño.
@@ -35,9 +35,4 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 <CardGrid>
   <LinkCard title="INZ.UI · componentes web" href="https://ui-web.inzumer.com" />
   <LinkCard title="INZ.EMAILS · componentes de mails" href="https://ui-emails.inzumer.com" />
-  <LinkCard
-    title="INZ.NATIVE · componentes mobile"
-    href="https://ui-native.inzumer.com"
-    description="En desarrollo."
-  />
 </CardGrid>

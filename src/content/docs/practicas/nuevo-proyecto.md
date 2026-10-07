@@ -20,7 +20,8 @@ pnpm add @inzumer/ui-library @inzumer/tokens
 
 ## Mobile
 
-- La [librería mobile](/paquetes/ui-native/) (React Native con Expo) sobre los mismos tokens.
+- Un contenedor nativo (Expo) con la web en una WebView: mismas pantallas, sin otra librería. Ver
+  [Apps móviles](/practicas/apps-moviles/).
 
 ## Mails
 
