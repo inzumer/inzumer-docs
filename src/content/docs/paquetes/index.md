@@ -10,7 +10,6 @@ prefijo.
 ```mermaid
 flowchart LR
   tokens["tokens"] --> ui["ui-library"]
-  tokens --> native["mobile"]
   tokens --> email["email"]
   config["eslint · prettier · tsconfig · ci"] -.-> ui
 ```
@@ -19,7 +18,6 @@ flowchart LR
 | ---------------------------------------------- | --------------------------------------------------- |
 | [`@inzumer/tokens`](/paquetes/tokens/)         | Colores, tipografía, espaciado y preset de Tailwind |
 | [`@inzumer/ui-library`](/paquetes/ui-library/) | Componentes React para la web                       |
-| [Librería mobile](/paquetes/ui-native/)        | Componentes React Native (Expo)                     |
 | [`@inzumer/email`](/paquetes/email/)           | Componentes y plantillas de mails                   |
 | [`@inzumer/eslint`](/paquetes/eslint/)         | Reglas de ESLint compartidas                        |
 | [`@inzumer/prettier`](/paquetes/prettier/)     | Formato y orden de imports                          |
@@ -33,4 +31,3 @@ web. Cómo combinarlos en un proyecto nuevo está en [Armar un proyecto](/practi
 
 - Componentes web: [ui-web.inzumer.com](https://ui-web.inzumer.com)
 - Componentes de mails: [ui-emails.inzumer.com](https://ui-emails.inzumer.com)
-- Componentes mobile: [ui-native.inzumer.com](https://ui-native.inzumer.com)

@@ -7,7 +7,6 @@ description: 'Dónde se publica cada cosa y cómo se comparte.'
 | -------------------------------- | ------------------------------------------------------ |
 | Componentes web (Storybook)      | [ui-web.inzumer.com](https://ui-web.inzumer.com)       |
 | Componentes de mails (Storybook) | [ui-emails.inzumer.com](https://ui-emails.inzumer.com) |
-| Componentes mobile (Storybook)   | [ui-native.inzumer.com](https://ui-native.inzumer.com) |
 | Esta documentación               | [ui-docs.inzumer.com](https://ui-docs.inzumer.com)     |
 
 - Todo se publica en **GitHub Pages** desde `main`; el DNS de `inzumer.com` está en Vercel, con
