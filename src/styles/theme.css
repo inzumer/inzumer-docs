@@ -1,0 +1,26 @@
+/* Inzumer: black and white, like the INZ logos. The site title reads as the text logo. */
+:root {
+  --sl-color-accent-low: #2a2a2a;
+  --sl-color-accent: #e5e5e5;
+  --sl-color-accent-high: #ffffff;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #e5e5e5;
+  --sl-color-accent: #111111;
+  --sl-color-accent-high: #111111;
+}
+
+.site-title {
+  padding: 2px 10px;
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+:root:not([data-theme='light']) .site-title {
+  background: #ffffff;
+  color: #111111;
+}
