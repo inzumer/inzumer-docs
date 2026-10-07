@@ -1,10 +1,10 @@
 ---
-title: 'inzumer-ci'
+title: '@inzumer/ci'
 description: 'Workflows reutilizables de GitHub Actions: CI, seguridad, releases y accesibilidad.'
 ---
 
-Repositorio: [inzumer-ci](https://github.com/inzumer/inzumer-ci). Cada repo los llama con
-`uses: inzumer/inzumer-ci/.github/workflows/<workflow>.yml@v2`.
+Repositorio: [inzumer-ci](https://github.com/inzumer/inzumer-ci). No se instala desde npm: cada
+repo llama a los workflows con `uses: inzumer/inzumer-ci/.github/workflows/<workflow>.yml@v2`.
 
 | Workflow                                                                             | Qué hace                                                                    |
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |

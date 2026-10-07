@@ -21,6 +21,18 @@ export default defineConfig({
       favicon: '/favicon.ico',
       customCss: ['./src/styles/theme.css'],
       head: [
+        { tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+        {
+          tag: 'link',
+          attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+          },
+        },
         {
           tag: 'link',
           attrs: { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },

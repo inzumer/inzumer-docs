@@ -11,13 +11,10 @@ flowchart LR
   tokens["@inzumer/tokens"] --> ui["@inzumer/ui-library"]
   tokens --> native["librería mobile"]
   tokens --> email["@inzumer/email"]
-  email --> milimonEmails["@inzumer/milimon-emails"]
-  ui --> milimon["Milimon (web)"]
-  milimonEmails --> api["Milimon (API)"]
   eslint["@inzumer/eslint"] -.-> ui
   prettier["@inzumer/prettier"] -.-> ui
   tsconfig["@inzumer/tsconfig"] -.-> ui
-  ci["inzumer-ci"] -.-> milimon
+  ci["@inzumer/ci"] -.-> ui
 ```
 
 | Paquete                                        | Para qué                                            | Storybook                                              |
@@ -31,5 +28,5 @@ flowchart LR
 | [`@inzumer/tsconfig`](/paquetes/tsconfig/)     | Configuraciones de TypeScript                       | —                                                      |
 | [`inzumer-ci`](/paquetes/ci/)                  | Workflows de GitHub Actions reutilizables           | —                                                      |
 
-Las líneas punteadas son herramientas de desarrollo: todos los repos las usan, no solo los que
-aparecen en el diagrama.
+Las líneas punteadas son herramientas de desarrollo: las usan todos los repos. Cómo se combinan en
+cada producto está en **Proyectos**.

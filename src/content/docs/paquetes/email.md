@@ -23,5 +23,4 @@ pnpm add @inzumer/email react react-dom
   (`banner`, `main`, `contentinfo`).
 - Los íconos de redes son PNG (los clientes de mail no muestran SVG), de la misma familia que los de
   `@inzumer/ui-library`.
-- Cada producto arma sus mails con estos componentes: por ejemplo
-  [`@inzumer/milimon-emails`](/proyectos/milimon/).
+- Cada producto arma sus mails en su propio paquete, con estos componentes como base.
