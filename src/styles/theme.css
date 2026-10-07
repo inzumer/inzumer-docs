@@ -90,3 +90,8 @@
     background-color: rgb(var(--color-neutral-500));
   }
 }
+
+/* Cards keep the 0.5rem radius of the link cards. */
+.card {
+  border-radius: 0.5rem;
+}
