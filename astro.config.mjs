@@ -6,7 +6,7 @@ import starlightLinksValidator from 'starlight-links-validator';
 
 const site = 'https://ui-docs.inzumer.com';
 const description =
-  'Los paquetes del ecosistema Inzumer y cómo se arma cada proyecto con ellos: tokens, componentes web y mobile, emails, configuración y CI.';
+  'Los paquetes del ecosistema Inzumer y cómo combinarlos: tokens, componentes web y mobile, emails, configuración y CI.';
 
 export default defineConfig({
   site,
@@ -19,6 +19,8 @@ export default defineConfig({
       defaultLocale: 'root',
       locales: { root: { label: 'Español', lang: 'es' } },
       favicon: '/favicon.ico',
+      // Long commands wrap instead of scrolling sideways on phones.
+      expressiveCode: { defaultProps: { wrap: true } },
       customCss: ['./src/styles/theme.css'],
       head: [
         { tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
@@ -57,7 +59,6 @@ export default defineConfig({
       sidebar: [
         { label: 'Inicio', link: '/' },
         { label: 'Paquetes', items: [{ autogenerate: { directory: 'paquetes' } }] },
-        { label: 'Proyectos', items: [{ autogenerate: { directory: 'proyectos' } }] },
         { label: 'Prácticas', items: [{ autogenerate: { directory: 'practicas' } }] },
       ],
     }),
