@@ -3,6 +3,11 @@ allowBuilds:
   esbuild: true
   sharp: true
 
+# Our own packages (ui-library, tokens) are used right after we publish them; the release-age delay
+# only protects against compromised third-party releases.
+minimumReleaseAgeExclude:
+  - '@inzumer/*'
+
 # Also install the WebAssembly builds of native packages, used automatically when a native binary
 # can't load (e.g. Windows Smart App Control blocking a freshly released `.node` file).
 supportedArchitectures:

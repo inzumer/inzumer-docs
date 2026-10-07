@@ -1,0 +1,7 @@
+/* ui-library classes without Tailwind's preflight, so Starlight keeps its own base styles. */
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@config '../../tailwind.config.mjs';
+
+@source '../../node_modules/@inzumer/ui-library/dist';

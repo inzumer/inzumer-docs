@@ -5,7 +5,10 @@
   --sl-color-accent-low: #262626;
   --sl-color-accent: #e0e0e0;
   --sl-color-accent-high: #f8f8f8;
-  /* Neutral greys of inzumer.com instead of the bluish defaults. */
+}
+
+/* Neutral greys of inzumer.com instead of the bluish defaults; dark only, light keeps Starlight's. */
+:root:not([data-theme='light']) {
   --sl-color-black: #151515;
   --sl-color-gray-6: #1c1c1c;
   --sl-color-gray-5: #262626;
@@ -71,23 +74,6 @@
 
   .sl-markdown-content td:first-child {
     font-weight: 600;
-  }
-}
-
-/* The tokens' dark scrollbar, for Starlight's dark theme (it sets data-theme, not data-color-scheme). */
-@supports (scrollbar-width: thin) {
-  :root[data-theme='dark'] * {
-    scrollbar-color: rgb(var(--color-neutral-600)) transparent;
-  }
-}
-
-@supports selector(::-webkit-scrollbar) {
-  :root[data-theme='dark'] ::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--color-neutral-600));
-  }
-
-  :root[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(var(--color-neutral-500));
   }
 }
 
