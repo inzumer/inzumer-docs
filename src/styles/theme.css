@@ -1,30 +1,33 @@
-/* Inzumer: black and white, like the INZ logos, in Inter. The site title reads as
-   the text logo. */
+/* Inzumer: #151515 and #F8F8F8 in Inter, like inzumer.com. The site title is its uppercase
+   wordmark, without a box. */
 :root {
   --sl-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --sl-color-accent-low: #2a2a2a;
-  --sl-color-accent: #e5e5e5;
-  --sl-color-accent-high: #ffffff;
+  --sl-color-accent-low: #262626;
+  --sl-color-accent: #e0e0e0;
+  --sl-color-accent-high: #f8f8f8;
+  /* Neutral greys of inzumer.com instead of the bluish defaults. */
+  --sl-color-black: #151515;
+  --sl-color-gray-6: #1c1c1c;
+  --sl-color-gray-5: #262626;
+  --sl-color-gray-4: #555555;
 }
 
 :root[data-theme='light'] {
-  --sl-color-accent-low: #e5e5e5;
-  --sl-color-accent: #111111;
-  --sl-color-accent-high: #111111;
+  --sl-color-accent-low: #e0e0e0;
+  --sl-color-accent: #151515;
+  --sl-color-accent-high: #151515;
 }
 
 .site-title {
-  padding: 2px 10px;
-  border-radius: 8px;
-  background: #111111;
-  color: #ffffff;
+  color: #f8f8f8;
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-:root:not([data-theme='light']) .site-title {
-  background: #ffffff;
-  color: #111111;
+:root[data-theme='light'] .site-title {
+  color: #151515;
 }
 
 /* Phones: long code wraps inside tables and diagrams fit the column. */
@@ -68,5 +71,22 @@
 
   .sl-markdown-content td:first-child {
     font-weight: 600;
+  }
+}
+
+/* The tokens' dark scrollbar, for Starlight's dark theme (it sets data-theme, not data-color-scheme). */
+@supports (scrollbar-width: thin) {
+  :root[data-theme='dark'] * {
+    scrollbar-color: rgb(var(--color-neutral-600)) transparent;
+  }
+}
+
+@supports selector(::-webkit-scrollbar) {
+  :root[data-theme='dark'] ::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--color-neutral-600));
+  }
+
+  :root[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--color-neutral-500));
   }
 }
